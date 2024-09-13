@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Check Input</title>
+    <script>
+        function validateForm() {
+            var fn = document.getElementById("first-name").value;
+            var ln = document.getElementById("last-name").value;
+
+            if (!fn || !ln) {
+                alert(!fn && !ln ? "First name and Last name must be filled!" : !fn ? "First name must be filled!" : "Last name must be filled!");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return validateForm()">
+        <label>First Name: <input type="text" id="first-name"></label>
+        <br><br>
+        <label>Last Name: <input type="text" id="last-name"></label>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
